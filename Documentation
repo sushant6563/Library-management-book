@@ -1,0 +1,184 @@
+Library Management System Documentation
+
+
+Project Overview
+
+
+The Library Management System is a Java-based application designed to streamline the management of library operations. With an intuitive user interface and robust functionality, the system simplifies book management, member registration, and loan tracking. It is built to enhance efficiency and ensure data security for libraries of all sizes.
+
+
+Key Features
+
+
+Book Management: Add, edit, delete, and view detailed book records.
+Member Management: Register new members, update existing profiles, and manage member details.
+Loan Management: Record and manage loan transactions, track due dates, and update loan records.
+Authentication: Secure login functionality for users and administrators.
+Responsive Design: Optimized for a seamless experience on various devices, including desktops, tablets, and smartphones.
+Dynamic Integration: Combines JSP and Servlets for dynamic content rendering and robust backend processing.
+Testing and Validation: Comprehensive unit tests ensure reliability and maintainability of the DAO and service layers.
+
+
+
+Technology Stack
+
+
+Frontend: HTML, CSS, JavaScript (with modern responsive design).
+Backend: Java (JSP, Servlets, JDBC for database connectivity).
+Database: MySQL, with predefined schemas for books, members, and loans.
+Build Tool: Apache Maven, used for dependency management and project lifecycle.
+Testing Framework: JUnit, for thorough unit testing of DAO and service functionalities.
+
+
+
+Directory Structure
+
+
+LibraryManagementSystem/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com.library.dao/         # DAO classes
+│   │   │   ├── com.library.services/    # Service classes
+│   │   │   ├── com.library.servlets/    # Servlet classes
+│   ├── resources/
+│   │   └── db.properties                # Database configuration
+│   ├── webapp/
+│   │   ├── WEB-INF/
+│   │   │   ├── web.xml                  # Deployment descriptor
+│   │   ├── jsp/                         # JSP files
+│   │   ├── css/                         # CSS stylesheets
+├── test/
+│   ├── java/
+│   │   ├── com.library.test/           # Unit test classes
+└── README.md
+
+
+
+
+Setup Instructions
+
+
+Prerequisites
+
+
+Java Development Kit (JDK) 8 or above.
+Apache Maven for building and managing dependencies.
+MySQL Server for database management.
+An IDE such as IntelliJ IDEA, Eclipse, or NetBeans.
+
+
+Steps
+
+
+
+
+Clone the Repository
+
+
+git clone <repository-url>
+cd LibraryManagementSystem
+
+
+
+
+
+Configure the Database
+
+
+Create a database named library_db.
+Execute the SQL script in the resources/ directory to set up tables for books, members, and loans.
+Update the db.properties file with database credentials.
+
+
+
+
+Build the Project
+
+
+mvn clean install
+
+
+
+
+
+Deploy the Application
+
+
+Copy the generated .war file from the target/ directory to the webapps folder of your application server (e.g., Apache Tomcat).
+
+
+
+
+Access the Application
+
+
+Open a web browser and navigate to http://localhost:8080/LibraryManagementSystem.
+
+
+
+
+
+Unit Testing
+
+
+Overview
+
+
+The system incorporates rigorous testing to ensure that all functionalities work as expected. Tests cover the major components, including DAO classes and service layers.
+
+
+Tested Components
+
+
+BookDAO: Tests for adding, retrieving, and deleting books.
+MemberDAO: Tests for adding, retrieving, and deleting members.
+LoanDAO: Tests for adding, retrieving, and deleting loan records.
+
+
+Running Tests
+
+
+To execute the unit tests:
+
+
+mvn test
+
+
+
+Test reports are generated in the target/surefire-reports/ directory.
+
+
+
+JSP Pages
+
+
+Home.jsp: Main landing page with navigation.
+AddBook.jsp: Form for adding new books.
+ManageMembers.jsp: Form for managing members.
+LoanRecords.jsp: Interface for loan record management.
+Login.jsp: Secure login page for users and administrators.
+
+
+
+Future Enhancements
+
+
+Add advanced search functionality for books and members.
+Include a dashboard for analytics, providing insights into borrowing trends and library statistics.
+Implement email notifications for overdue loans.
+Develop RESTful APIs for external integrations.
+
+
+
+Contributors
+
+
+Krishnakant: Project Lead and Developer (GitHub)
+
+
+
+License
+
+
+This project is licensed under the MIT License. Refer to the LICENSE file for detailed terms and conditions.
